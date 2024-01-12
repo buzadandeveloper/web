@@ -1,0 +1,638 @@
+:root {
+  --orange-color: #da722c;
+  --dark-blue-color: #023047;
+  --blue-color: #057ada;
+  --dark-color: #070917;
+  --light-blue-color: #6f7dfb;
+  --light-color: #e8f7fb;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  width: 1134px;
+  margin: 0 auto;
+}
+
+/* Buttons */
+.btn {
+  padding: 16px 32px;
+  border-radius: 24px;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+}
+
+.btn.dark {
+  background-color: var(--dark-blue-color);
+}
+
+.btn.light {
+  background-color: var(--orange-color);
+}
+
+.btn.enroll-icon::before {
+  content: url(/images/enroll-icon.svg);
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  transform: translateY(-50%);
+}
+
+.btn.enroll-icon {
+  padding-left: 60px;
+}
+
+/* Header */
+header {
+  background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+  height: 100vh;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 1134px;
+  top: 42px;
+  z-index: 100;
+  transition: all 500ms linear;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  list-style: none;
+}
+
+nav .logo {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+}
+nav.scrolled {
+  background-color: #212448;
+  top: 0;
+  padding: 10px;
+  border-radius: 12px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 60px;
+}
+
+.hero-section .left h1 {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.hero-section .left p {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 200%;
+  margin-bottom: 30px;
+  margin-top: 18px;
+}
+
+.hero-section .left {
+  width: 457px;
+}
+
+.hero-section .right {
+  align-self: flex-end;
+}
+
+.hero-section .right img {
+  height: 562px;
+  position: relative;
+  top: 7px;
+  left: 8.125rem;
+}
+
+/* Achievment Cards */
+.achievment-card {
+  position: absolute;
+}
+
+.achievment-card .content {
+  border-radius: 24px;
+  background-color: #fff;
+  padding: 12px 32px;
+  position: relative;
+  z-index: 10;
+}
+.achievment-card.students-enrolled {
+  left: 46%;
+  top: 46%;
+}
+.achievment-card h3 {
+  color: var(--dark-blue-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: -8px;
+}
+.achievment-card p {
+  color: var(--dark-blue-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  font-style: normal;
+  margin-bottom: 6px;
+  margin-top: -8px;
+}
+.achievment-card .bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #6f7dfb 0%, #3b448f 100%);
+  z-index: 1;
+  top: 8px;
+  left: 7px;
+}
+.achievment-card.overall-rating {
+  left: 40%;
+  top: 75%;
+}
+.achievment-card .content div {
+  display: flex;
+  justify-content: center;
+}
+
+/* Testimonial Section */
+section {
+  margin-top: 160px;
+}
+.testimonial-section {
+  display: flex;
+  gap: 134px;
+  align-items: center;
+}
+.testimonial-section .btn.mobile {
+  display: none;
+}
+
+section h2 {
+  color: var(--dark-blue-color);
+  font-family: "Raleway", sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 900;
+}
+h2.light {
+  color: #fff;
+}
+section p {
+  color: var(--dark-blue-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  width: 558px;
+  margin-top: 8px;
+}
+.testimonial-section .right .btn.desktop {
+  margin-top: 30px;
+}
+.testimonial-section .testimonial-card {
+  width: 442px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0px 9px 36px 0px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+  position: relative;
+}
+.testimonial-section .testimonial-card .content {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 900;
+  border-radius: 24px;
+  background: var(--light-blue-color);
+  padding: 24px 32px;
+}
+.testimonial-section .testimonial-card:last-child .content {
+  background-color: var(--orange-color);
+}
+.info h4 {
+  color: var(--dark-blue-color);
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+}
+.testimonial-section .testimonial-card .info {
+  padding: 24px 32px;
+}
+.info p {
+  color: var(--dark-blue-color);
+  font-family: " Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%;
+}
+.testimonial-section .testimonial-card img {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  right: 32px;
+  bottom: 10px;
+}
+.testimonial-section .right h2 {
+  margin-bottom: 16px;
+}
+.testimonial-section .testimonial-card:last-child {
+  left: 36px;
+}
+.testimonial-section .left {
+  margin-top: 35px;
+}
+.testimonial-section .testimonial-card:first-child::before {
+  content: "";
+  width: 28px;
+  height: 500px;
+  border-radius: 24px;
+  background-color: var(--dark-blue-color);
+  position: absolute;
+  top: -35px;
+  left: 88px;
+  z-index: -1;
+}
+/* Course Section */
+.courses-section {
+  width: 100%;
+  background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+  padding: 70px 0;
+}
+.courses-section .wrapper h2 {
+  text-align: center;
+}
+.course-cards {
+  display: flex;
+  gap: 50px;
+  padding-bottom: 60px;
+}
+.courses-section .course-card {
+  border-radius: 24px;
+  background: #fff;
+  padding: 0 32px;
+  margin-top: 60px;
+  position: relative;
+}
+.courses-section .course-card::after {
+  content: "";
+  border-radius: 24px;
+  background: var(--dark-blue-color);
+  height: 8px;
+  left: 32px;
+  right: 32px;
+  bottom: 0;
+  position: absolute;
+}
+.courses-section .course-cards .course-card img {
+  margin-top: -4px;
+}
+.courses-section .course-card h3 {
+  color: var(--dark-blue-color);
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+.courses-section .course-cards .info {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+.courses-section .course-cards .duration {
+  color: var(--dark-blue-color);
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  white-space: nowrap;
+  position: relative;
+  padding-left: 20px;
+}
+.courses-section .course-cards .duration::before {
+  content: url(/images/clock-icon.svg);
+  position: absolute;
+  top: 2px;
+  left: -6px;
+}
+.courses-section .wrapper {
+  position: relative;
+  height: 85vh;
+}
+.courses-section .wrapper .btn {
+  position: absolute;
+  right: 0;
+}
+/* App Section */
+.wrapper .app-section {
+  text-align: center;
+  padding-bottom: 100px;
+}
+.app-section p {
+  display: inline-block;
+  text-align: center;
+  padding-top: 14px;
+  padding-bottom: 45px;
+}
+.wrapper .app-section .app-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.app-buttons .app-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #000;
+  color: #fff;
+  padding: 16px 64px 16px 30px;
+}
+.app-buttons .app-btn span {
+  color: #fff;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+}
+/* Footer */
+footer {
+  background-color: var(--dark-color);
+  color: #fff;
+  padding-top: 70px;
+}
+footer h3 {
+  color: var(--orange-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+footer ul li a {
+  text-decoration: none;
+  color: #fff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  padding: 9px 0;
+}
+footer .links-container {
+  display: grid;
+  grid-template-columns: 2fr 2fr 3fr;
+}
+footer .social {
+  display: flex;
+  gap: 28px;
+  padding: 16px 0;
+}
+footer form {
+  position: relative;
+  margin-top: 10px;
+}
+footer form input {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  border-radius: 8px;
+  background: #fff;
+  border: none;
+  padding: 8px 290px 8px 27px;
+}
+footer form .submit-btn {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  border-radius: 8px;
+  background: var(--dark-blue-color);
+  border: none;
+  padding: 3px 32px;
+  cursor: pointer;
+}
+footer p {
+  padding-top: 32px;
+  padding-bottom: 70px;
+}
+@media (max-width: 1100px) {
+  html,
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+
+  }
+  .btn {
+    padding: 12px 32px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .wrapper {
+    padding: 0 100px;
+  }
+  header,
+  .hero-section,
+  header .wrapper {
+    max-height: 1500px;
+  }
+  nav {
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 30px 100px;
+  }
+  nav.scrolled {
+    padding: 20px 100px;
+    border-radius: 0;
+  }
+  .hero-section {
+    flex-direction: column;
+  }
+  .hero-section .left {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 250px;
+    margin-left: -250px;
+  }
+  .hero-section .left h1 {
+    font-weight: 900;
+    line-height: 125%;
+  }
+  .hero-section .left .btn {
+    align-self: flex-start;
+  }
+  .hero-section .right {
+    position: absolute;
+    bottom: 0;
+  }
+  .hero-section .right img {
+    height: 780px;
+    margin-right: 130px;
+    top: 10px;
+  }
+  .hero-section .achievment-card {
+    position: relative;
+    margin-bottom: 160px;
+  }
+  .achievment-card.students-enrolled,
+  .achievment-card.overall-rating {
+    left: unset;
+    top: unset;
+  }
+  .hero-section .achievment-cards {
+    align-self: flex-start;
+    margin: 0 0 0 70px;
+  }
+  .achievment-card.overall-rating {
+    top: 15px;
+  }
+  .testimonial-section .right h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  .testimonial-section {
+    flex-direction: column;
+    align-items: stretch;
+    margin-left: 30px;
+    margin-top: 100px;
+    margin-bottom: -120px;
+  }
+  .testimonial-section .testimonial-card {
+    width: 85%;
+    margin-bottom: 40px;
+    top: -94px;
+  }
+  .testimonial-section .testimonial-card:last-child {
+    left: 0;
+  }
+  .testimonial-section .testimonial-card:first-child::before {
+    height: 480px;
+    top: -40px;
+  }
+  .testimonial-section .btn.desktop {
+    display: none;
+  }
+  .testimonial-section .btn.mobile {
+    display: block;
+    align-self: flex-end;
+    transform: translateX(-90%);
+    bottom: 190px;
+    order: 3;
+  }
+  .testimonial-section .right {
+    order: 1;
+    width: 640px;
+  }
+  .testimonial-section .left {
+    order: 2;
+  }
+  .testimonial-section .right p {
+    display: inline;
+  }
+  .wrapper .testimonial-section {
+    max-height: 800px;
+  }
+  .courses-section .course-cards{
+    flex-direction: column;
+    position: absolute;
+    margin-left: 60px;
+    gap: 40px;
+  }
+  .courses-section h2 {
+    transform: translateX(-8%);
+   }
+  .courses-section .course-cards .course-card img {
+    width: 600px;
+    height: 280px;
+  }
+  .courses-section .btn.light {
+    top: 93%;
+    display: flex;
+    align-self: flex-end;
+    right: 27%;
+  }
+  .courses-section .course-cards .course-card h3 {
+    font-size: 28px;
+  }
+  .app-section {
+    transform: translateX(-8%);
+  }
+  footer .links-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  footer .links-container .links:last-child {
+    margin-top: 45px;
+  }
+  footer .links-container .links .social,
+  footer .links-container .links form {
+    margin-left: 40px;
+  }
+  footer .links-container .links:nth-child(2) {
+    transform: translateX(-270px);
+  }
+  footer form input {
+    padding: 8px 400px 8px 27px;
+  }
+}
